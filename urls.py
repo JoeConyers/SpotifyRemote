@@ -7,7 +7,7 @@ from django.conf.urls.defaults import patterns, include, url
 urlpatterns = patterns('',
     # Examples:
      url(r'^$', 'localspotifyclient.views.home', name='home'),
-     url(r'^playpause/', 'localspotifyclient.views.playpause', name='playpause'),
+     url(r'^playpause/', 'localspotifyclient.views.playpause', name=''),
      url(r'^next/', 'localspotifyclient.views.next', name='next'),
      url(r'^previous/', 'localspotifyclient.views.previous', name='previous'),
      url(r'^shuffle/', 'localspotifyclient.views.shuffle', name='shuffle'),

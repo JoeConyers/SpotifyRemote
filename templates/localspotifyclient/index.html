@@ -1,25 +1,43 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
-
-<html lang="en">
+<!DOCTYPE html> 
+<html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>index</title>
-	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<title>Spotify Controller</title>
 	<meta name="author" content="Joe Conyers III">
 	<!-- Date: 2011-09-25 -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
 </head>
 <body>
-<a href='/previous'>previous</a> <a href='/next'>next</a> 
-
-<br><br> <a href='/playpause'>Play / Pause </a>
-
-
-<br><br> <a href='/shuffle'>shuffle</a>  <a href='/repeat'>repeat </a>
-<br><br>Volume: <a href='/volumeup'>Up</a> <a href='/volumedown'> Down</a>
-
-
-
+	<div data-role="page">
+		<div data-role="header">
+			<h1>Spotify Controller</h1>
+		</div>
+		<div data-role="content">  
+				<div data-role="controlgroup" data-type="horizontal">
+					<a  data-icon="arrow-l" data-role="button" data-inline="true" href="/previous" rel="external">Prev song</a>
+					<a data-icon="arrow-r" data-role="button" data-inline="true" class="ui-btn-right" href="/next" rel="external">Next song</a>
+				</div>
+				<div data-role="controlgroup">
+					<a href="/playpause"  data-role="button" data-theme="e" rel="external">Play / Pause</a>
+					<a href='/shuffle' data-role="button" data-theme="e" rel="external">Shuffle</a>
+					<a href='/repeat' data-role="button" data-theme="e" rel="external" >Repeat</a>
+				</div>
+				<br>
+				<ul data-role="listview" data-theme="g">
+					<li data-role="list-divider">Volume</li>
+				</ul>
+				<br>
+				<div data-role="controlgroup" data-type="horizontal">
+					<a href='/volumeup' data-role="button" data-icon="plus" rel="external">Up</a> <a href='/volumedown' data-role="button" data-icon="minus" rel="external"> Down</a> <a href='/mute' data-role="button" rel="external" >Mute</a> 
+				</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+				<h4>  {{ TrackName }} - {{ArtistName}}</h4>
+		</div><!-- /footer -->
+	</div>
 
 </body>
 </html>

@@ -1,42 +1,51 @@
 from django.shortcuts import render_to_response
+from django.template import RequestContext
+import sys
+from appscript import *
 from spotipy import Spotipy
 from django.http import HttpResponse
+import os
+
 spotify = Spotipy()
 
 def home(request):
-	return render_to_response('localspotifyclient/index.html')
+	track_name = app(u'Spotify').current_track.name.get()
+	artist_name = app(u'Spotify').current_track.artist.get()
+	return render_to_response('localspotifyclient/index.html', {'TrackName': track_name, 'ArtistName' : artist_name })
 	
 def playpause(request):
 	spotify.play_pause()
-	html = "<html><body>Play/Pause</body></html>"
-	return HttpResponse(html)
+	return render_to_response('localspotifyclient/index.html')
 
 def next(request):
 	spotify.next()
-	html = "<html><body>Next</body></html>"
-	return HttpResponse(html)
+	return render_to_response('localspotifyclient/index.html')
 
 def previous(request):
 	spotify.previous()
-	html = "<html><body>Previous</body></html>"
-	return HttpResponse(html)	
+	return render_to_response('localspotifyclient/index.html')	
 	
 def shuffle(request):
-		spotify.shuffle()
-		html = "<html><body>Shuffle</body></html>"
-		return HttpResponse(html)	
-		
-def shuffle(request):
-		spotify.repeat()
-		html = "<html><body>Repeat</body></html>"
-		return HttpResponse(html)	
+	spotify.shuffle()
+	return render_to_response('localspotifyclient/index.html')
 		
 def volumeup(request):
-		spotify.volume_up()
-		html = "<html><body>Volume Up</body></html>"
-		return HttpResponse(html)
+	spotify.volume_up()
+	return render_to_response('localspotifyclient/index.html')
 		
 def volumedown(request):
-		spotify.volume_down()
-		html = "<html><body>Volume Down</body></html>"
-		return HttpResponse(html)
+	spotify.volume_down()
+	return render_to_response('localspotifyclient/index.html')
+	
+def mute(request):
+	spotify.volume_down()
+	spotify.volume_down()
+	spotify.volume_down()
+	spotify.volume_down()
+	spotify.volume_down()
+	spotify.volume_down()
+	spotify.volume_down()
+	spotify.volume_down()
+	spotify.volume_down()
+	spotify.volume_down()
+	return render_to_response('localspotifyclient/index.html')
