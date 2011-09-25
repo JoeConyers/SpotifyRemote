@@ -33,15 +33,10 @@ def shuffle(request):
 		
 def volumeup(request):
 		spotify.volume_up()
-		html = "<html><body>Repeat</body></html>"
+		html = "<html><body>Volume Up</body></html>"
 		return HttpResponse(html)
 		
 def volumedown(request):
 		spotify.volume_down()
 		html = "<html><body>Volume Down</body></html>"
 		return HttpResponse(html)
-		
-def mute(request):
-		spotify.mute()
-		html = "<html><body>Mute</body></html>"
-		return HttpResponse(html)		
