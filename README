@@ -1,8 +1,14 @@
 V.01
 
-A basic spotify remote. I rushed this up to show Spotifies dev evangalist.
+A basic spotify remote, allows your phone/tablet to control your mac spotify client. I rushed this up to show Spotifies dev evangalist, it's pretty rough.
 
-It uses, Django, spotipy 
+It uses, Django, spotipy, appscript jquery mobile.
+
+How to:
+1) put in a folder 
+2) pip spotipy and appscript
+3) Forward a router's ports.
+4) python manage.py runserver [yourlocalip]:8000
 
 KNOWN ISSUES
 +App crashes if it loads while a song is not being played due to not having a conditional around checking what song is currently being played
@@ -14,3 +20,4 @@ Todo
 + Adjust UI so it makes more sense
 + Remove spotipy and just use appscript / add more features to Spotipy( Song time check, current song title)
 + add cover art
++ make mute not lame
