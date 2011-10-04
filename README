@@ -1,0 +1,16 @@
+V.01
+
+A basic spotify remote. I rushed this up to show Spotifies dev evangalist.
+
+It uses, Django, spotipy 
+
+KNOWN ISSUES
++App crashes if it loads while a song is not being played due to not having a conditional around checking what song is currently being played
+
+Todo
++ Add song time
++ Add polling for current song / songtime
++ Add smart polling so that once the current song is done playing it checks for a new song
++ Adjust UI so it makes more sense
++ Remove spotipy and just use appscript / add more features to Spotipy( Song time check, current song title)
++ add cover art
