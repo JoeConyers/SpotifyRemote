@@ -1,6 +1,6 @@
 V.01
 
-A basic spotify remote, allows your phone/tablet to control your mac spotify client. I rushed this up to show Spotifies dev evangalist, it's pretty rough.
+A basic spotify remote, allows your phone/tablet to control your mac spotify client. I rushed this up to show Spotify's dev evangalist, it's pretty rough.
 
 It uses, Django, spotipy, appscript jquery mobile.
 
