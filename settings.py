@@ -100,7 +100,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'shigawire.urls'
+ROOT_URLCONF = 'SpotifyController.urls'
 
 TEMPLATE_DIRS = (
 	"/Users/joeconyers/sites/SpotifyController/templates",
