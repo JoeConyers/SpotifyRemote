@@ -9,8 +9,16 @@ import os
 spotify = Spotipy()
 
 def home(request):
-	track_name = app(u'Spotify').current_track.name.get()
-	artist_name = app(u'Spotify').current_track.artist.get()
+	try:
+		track_name = app(u'Spotify').current_track.name.get()
+	except:
+		pass
+		track_name = ''	
+	try:	
+	  artist_name = app(u'Spotify').current_track.artist.get()
+	except:
+	  pass
+	  artist_name = ''
 	return render_to_response('localspotifyclient/index.html', {'TrackName': track_name, 'ArtistName' : artist_name })
 	
 def playpause(request):
