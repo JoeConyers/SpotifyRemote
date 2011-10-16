@@ -1,8 +1,8 @@
 If you actually want to use this you'll need to change the local 
 
-"/Users/joeconyers/sites/shigawire/templates" to your local directory.
+"/Users/joeconyers/sites/SpotifyController/templates" to your local directory.
 =======
-V.02
+V.03
 
 A basic spotify remote, allows your phone/tablet to control your mac spotify client. I rushed this up to show Spotify's dev evangalist, it's pretty rough.
 
