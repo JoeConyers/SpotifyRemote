@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 If you actually want to use this you'll need to change the local 
 
-"/Users/joeconyers/sites/shigawire/templates",
+"/Users/joeconyers/sites/shigawire/templates" to your local directory.
 =======
 V.01
 
@@ -15,8 +14,6 @@ How to:
 3) Forward a router's ports.
 4) python manage.py runserver [yourlocalip]:8000
 
-KNOWN ISSUES
-+App crashes if it loads while a song is not being played due to not having a conditional around checking what song is currently being played
 
 Todo
 + Add song time
@@ -26,4 +23,3 @@ Todo
 + Remove spotipy and just use appscript / add more features to Spotipy( Song time check, current song title)
 + add cover art
 + make mute not lame
->>>>>>> fc4bd71b76d86dae3170cbb01f09ff0e3dca6bf8
