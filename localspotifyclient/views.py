@@ -41,7 +41,7 @@ def previous(request):
 	
 def shuffle(request):
 	spotify.shuffle()
-		return redirect('/')
+	return redirect('/')
 		
 def volumeup(request):
 	spotify.volume_up()
