@@ -14,20 +14,16 @@ def home(request):
 	try:
 		track_name = app(u'Spotify').current_track.name.get()
 	except:
-		pass
 		track_name = ''	
-		
 	try:	
 	  artist_name = app(u'Spotify').current_track.artist.get()
 	except:
-	  pass
 	  artist_name = ''
 	
 	try:
 		track_time = app(u'Spotify').player_position.get()
 		track_time = "%02d:%02d" % divmod(track_time, 60)
 	except:
-		pass
 		track_time = '0:00'
 	
 	return render_to_response('localspotifyclient/index.html', {'TrackName': track_name, 'ArtistName' : artist_name, 'TrackTime' : track_time })
