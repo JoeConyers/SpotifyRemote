@@ -8,12 +8,14 @@ A basic spotify remote, allows your phone/tablet to control your mac spotify cli
 
 It uses, Django, spotipy, appscript, and jquery mobile.
 
-How to:
-1) put in a folder 
-2) pip install spotipy and pip install appscript
-3) Forward your router's ports to 8000(or whatever you want to set the ports to) on the machine you
-4) python manage.py runserver [yourlocalip]:[Your Preferred Port]
-5) navigate to localhost or your local ip.
+Dependencies:
+pip install spotipy 
+pip install appscript
+
+howto:
+1) Forward your router's ports to 8000(or whatever you want to set the ports to) to the computer where this app and spotify is running.
+2) python manage.py runserver [yourlocalip]:[Your Preferred Port, probably 8000]
+
 
 Todo
 + Add polling for current song / songtime 
